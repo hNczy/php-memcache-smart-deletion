@@ -1,0 +1,22 @@
+services:
+  php:
+    image: "php:memcache"
+    build:
+      dockerfile: php-memcache.Dockerfile
+    volumes:
+      - ./php:/app
+    entrypoint: php /app/memcache.php
+    depends_on:
+      memcached:
+        condition: service_started
+    networks:
+      - backend
+  memcached:
+    image: "memcached:alpine"
+    entrypoint: memcached -m 64 -vv
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
