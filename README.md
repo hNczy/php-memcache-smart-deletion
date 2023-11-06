@@ -72,6 +72,6 @@ service. It is a little bit faster and more elegant solution.
 
 **Use set instead of delete. It's safer and faster.**
 
-;)
+😉
 
 You can read story how I found this solution on my blog: [Definition of Success](https://hnczy.com/2023/11/05/definition-of-success/)
